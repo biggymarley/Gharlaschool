@@ -9,7 +9,7 @@ import {
   Star,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import about from "/assets/about.jpg";
 import action1 from "/assets/action1.jpeg";
@@ -32,7 +32,11 @@ const LoadingSpinner = () => (
           src="https://lottie.host/1734c84b-d01e-4b87-b541-02fa104cfb86/RFFD4XNPug.lottie"
           loop
           autoplay
+          style={{width:"300px"}}
         />
+         <h1 className="text-2xl font-bold mb-4 uppercase font text-white text-center">
+            gharla skate school
+          </h1>
       </div>
     </div>
   </div>
@@ -44,7 +48,7 @@ const SkateSchool = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -334,7 +338,7 @@ const SkateSchool = () => {
                 modifier: 1,
                 slideShadows: false,
               }}
-              pagination={false}
+              pagination={true}
               loop
               modules={[EffectCoverflow, Pagination]}
               // className="mySwiper"
@@ -377,10 +381,7 @@ const SkateSchool = () => {
                   <Phone className="w-6 h-6 mr-4 text-yellow-500" />
                   <p>+212 634-654666</p>
                 </div>
-                <div className="flex items-center text-yellow-500">
-                  <Mail className="w-6 h-6 mr-4 text-yellow-500" />
-                  <p>test@test.com</p>
-                </div>
+                
               </div>
               <div className="flex space-x-4 mt-6">
                 <a
@@ -395,23 +396,28 @@ const SkateSchool = () => {
               </div>
             </div>
             <div>
-              <form className="space-y-4">
+            <form  className="space-y-4" target="_blank" action="https://formsubmit.co/jhontho55@gmail.com" method="POST">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   className="w-full p-3 bg-gray-900 rounded-lg"
+                  required
                 />
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
                   className="w-full p-3 bg-gray-900 rounded-lg"
                 />
                 <textarea
                   placeholder="Message"
+                  name="message"
                   rows="4"
+                  required
                   className="w-full p-3 bg-gray-900 rounded-lg"
                 ></textarea>
-                <button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-lg transition-all">
+                <button type="submit" className="w-full bg-yellow-400 hover:bg-yellow-600 text-black py-3 rounded-lg transition-all">
                   Send Message
                 </button>
               </form>
