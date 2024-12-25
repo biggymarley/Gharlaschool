@@ -32,11 +32,11 @@ const LoadingSpinner = () => (
           src="https://lottie.host/1734c84b-d01e-4b87-b541-02fa104cfb86/RFFD4XNPug.lottie"
           loop
           autoplay
-          style={{width:"300px"}}
+          style={{ width: "300px" }}
         />
-         <h1 className="text-2xl font-bold mb-4 uppercase font text-white text-center">
-            gharla skate school
-          </h1>
+        <h1 className="text-2xl font-bold mb-4 uppercase font text-white text-center">
+          gharla skate school
+        </h1>
       </div>
     </div>
   </div>
@@ -136,9 +136,12 @@ const SkateSchool = () => {
             gharla skate school
           </h1>
           <p className="text-xl mb-8">Push Your Limits. Master The Board.</p>
-          <button className="font bg-yellow-500 hover:yellow-yellow-700 text-black px-8 py-3 rounded-full text-lg font-bold transition-all">
+          <a
+            href="#plans"
+            className="font bg-yellow-500 hover:yellow-yellow-700 text-black px-8 py-3 rounded-full text-lg font-bold transition-all"
+          >
             Start Skating
-          </button>
+          </a>
         </div>
       </header>
 
@@ -151,13 +154,12 @@ const SkateSchool = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg">
-                Welcome to Gharla Skate School, where we turn
-                passion into progress on the board! I’m Gharla, a dedicated
-                skateboarding instructor with a focus on skill-building, safety,
-                and fostering a vibrant skateboarding community. My classes are
-                designed for skaters of all levels, whether you're stepping on a
-                skateboard for the first time or looking to refine your skills.
-            
+                Welcome to Gharla Skate School, where we turn passion into
+                progress on the board! I’m Gharla, a dedicated skateboarding
+                instructor with a focus on skill-building, safety, and fostering
+                a vibrant skateboarding community. My classes are designed for
+                skaters of all levels, whether you're stepping on a skateboard
+                for the first time or looking to refine your skills.
               </p>
             </div>
             <div>
@@ -172,7 +174,7 @@ const SkateSchool = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gray-800 px-4">
+      <section className="py-20 bg-gray-800 px-4" id="plans">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center font">
             Choose Your Path
@@ -194,9 +196,14 @@ const SkateSchool = () => {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-yellow-400 hover:bg-yellow-700 text-black py-3 rounded-lg mt-8 transition-all">
-                  Choose {tier.tier}
-                </button>
+                <a
+                  href="https://www.instagram.com/gharla_skate_school/"
+                  target="_blank"
+                >
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-700 text-black py-3 rounded-lg mt-8 transition-all">
+                    Choose {tier.tier}
+                  </button>
+                </a>
               </div>
             ))}
           </div>
@@ -381,7 +388,6 @@ const SkateSchool = () => {
                   <Phone className="w-6 h-6 mr-4 text-yellow-500" />
                   <p>+212 634-654666</p>
                 </div>
-                
               </div>
               <div className="flex space-x-4 mt-6">
                 <a
@@ -396,7 +402,12 @@ const SkateSchool = () => {
               </div>
             </div>
             <div>
-            <form  className="space-y-4" target="_blank" action="https://formsubmit.co/jhontho55@gmail.com" method="POST">
+              <form
+                className="space-y-4"
+                target="_blank"
+                action="https://formsubmit.co/jhontho55@gmail.com"
+                method="POST"
+              >
                 <input
                   type="text"
                   placeholder="Name"
@@ -417,7 +428,10 @@ const SkateSchool = () => {
                   required
                   className="w-full p-3 bg-gray-900 rounded-lg"
                 ></textarea>
-                <button type="submit" className="w-full bg-yellow-400 hover:bg-yellow-600 text-black py-3 rounded-lg transition-all">
+                <button
+                  type="submit"
+                  className="w-full bg-yellow-400 hover:bg-yellow-600 text-black py-3 rounded-lg transition-all"
+                >
                   Send Message
                 </button>
               </form>
@@ -446,9 +460,7 @@ const SkateSchool = () => {
       {/* Footer */}
       <footer className="bg-gray-900 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">
-            © 2024 Gharla Skate School.
-          </p>
+          <p className="text-gray-400">© 2024 Gharla Skate School.</p>
         </div>
       </footer>
     </div>
