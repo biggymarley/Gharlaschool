@@ -9,14 +9,19 @@ import {
   Star,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import about from "/assets/about.jpg";
 import action1 from "/assets/action1.jpeg";
+import action10 from "/assets/action10.jpg";
 import action2 from "/assets/action2.jpeg";
 import action3 from "/assets/action3.jpg";
 import action4 from "/assets/action4.jpg";
+import action6 from "/assets/action6.jpg";
+import action7 from "/assets/action7.jpg";
+import action8 from "/assets/action8.jpg";
+import action9 from "/assets/action9.jpg";
 import hero from "/assets/hero.jpg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, EffectCoverflow, Pagination } from "swiper/modules";
 // import { Navigation, Pagination, Scrollbar } from "swiper";
 
 const LoadingSpinner = () => (
@@ -43,28 +48,6 @@ const SkateSchool = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const staff = [
-    {
-      name: "Tony Rodriguez",
-      role: "Head Coach",
-      experience: "15+ years",
-      specialty: "Street & Vert",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Junior Coach",
-      experience: "8 years",
-      specialty: "Technical Street",
-    },
-    {
-      name: "Mike Wilson",
-      role: "Advanced Coach",
-      experience: "12 years",
-      specialty: "Park & Bowl",
-    },
-  ];
-
   const reviews = [
     {
       name: "Siri",
@@ -117,7 +100,17 @@ const SkateSchool = () => {
       ],
     },
   ];
-  const actions = [action1, action2, action3, action4];
+  const actions = [
+    action1,
+    action2,
+    action3,
+    action4,
+    action6,
+    action7,
+    action8,
+    action9,
+    action10,
+  ];
   if (loading) {
     return <LoadingSpinner />;
   }
@@ -154,10 +147,13 @@ const SkateSchool = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg">
-                Founded by pro skaters with a passion for teaching, Radical
-                Skate School has been turning beginners into rippers since 2010.
-                Our state-of-the-art facility and experienced coaches create the
-                perfect environment for progression at any skill level.
+                Welcome to Gharla Skate School, where we turn
+                passion into progress on the board! I’m Gharla, a dedicated
+                skateboarding instructor with a focus on skill-building, safety,
+                and fostering a vibrant skateboarding community. My classes are
+                designed for skaters of all levels, whether you're stepping on a
+                skateboard for the first time or looking to refine your skills.
+            
               </p>
             </div>
             <div>
@@ -209,42 +205,82 @@ const SkateSchool = () => {
           <h2 className="text-4xl font-bold mb-12 text-center font">
             Skater Reviews
           </h2>
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
-            centeredSlides={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            {reviews.map((review) => (
-              <SwiperSlide key={review.name}>
-                <div className="bg-gray-800 p-6 rounded-lg min-h-[350px] mt-4">
-                  <div className="flex items-center mb-4">
-                    {/* <img
+          <div className="hidden md:flex">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              centeredSlides={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {reviews.map((review) => (
+                <SwiperSlide key={review.name}>
+                  <div className="bg-gray-800 p-6 rounded-lg min-h-[300px] mt-4">
+                    <div className="flex items-center mb-4">
+                      {/* <img
                     src={review.image}
                     alt={review.name}
                     className="w-16 h-16 rounded-full mr-4"
                     /> */}
-                    <div>
-                      <h3 className="font-bold">{review.name}</h3>
-                      <div className="flex">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 text-yellow-500 fill-current"
-                          />
-                        ))}
+                      <div>
+                        <h3 className="font-bold">{review.name}</h3>
+                        <div className="flex">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 text-yellow-500 fill-current"
+                            />
+                          ))}
+                        </div>
                       </div>
                     </div>
+                    <p className="text-gray-300">{review.comment}</p>
                   </div>
-                  <p className="text-gray-300">{review.comment}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="flex md:hidden">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              centeredSlides={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {reviews.map((review) => (
+                <SwiperSlide key={review.name}>
+                  <div className="bg-gray-800 p-6 rounded-lg min-h-[350px] mt-4">
+                    <div className="flex items-center mb-4">
+                      {/* <img
+                    src={review.image}
+                    alt={review.name}
+                    className="w-16 h-16 rounded-full mr-4"
+                    /> */}
+                      <div>
+                        <h3 className="font-bold">{review.name}</h3>
+                        <div className="flex">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 text-yellow-500 fill-current"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-300">{review.comment}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </section>
       {/* Gallery Section */}
@@ -278,7 +314,7 @@ const SkateSchool = () => {
                     <img
                       src={_}
                       alt={`Skating action ${i + 1}`}
-                      className="rounded-lg hover:opacity-75 transition-opacity cursor-pointer w-[90%] md:w-[350px]"
+                      className="rounded-lg hover:opacity-75 transition-opacity cursor-pointer w-[90%] h-[350px] object-cover"
                     />
                   </div>
                 </SwiperSlide>
@@ -309,7 +345,7 @@ const SkateSchool = () => {
                     <img
                       src={_}
                       alt={`Skating action ${i + 1}`}
-                      className="rounded-lg hover:opacity-75 transition-opacity cursor-pointer w-[90%] md:w-[350px]"
+                      className="rounded-lg hover:opacity-75 transition-opacity cursor-pointer w-[90%] h-[350px] object-cover"
                     />
                   </div>
                 </SwiperSlide>
