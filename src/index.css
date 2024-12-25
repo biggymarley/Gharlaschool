@@ -2,19 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html {
-        /* font-family: "Sedgwick Ave", serif; */
-    }
-  }
-  .font{
-    font-family: "Sedgwick Ave", serif;
-  }
-  button{
-    font-family: "Sedgwick Ave", serif;
+.font {
+  font-family: "Sedgwick Ave", serif;
+}
+button {
+  font-family: "Sedgwick Ave", serif;
+}
 
-  }
-
-  .transition-opacity {
-    transition: opacity 500ms ease-in-out;
-  }
+.transition-opacity {
+  transition: opacity 500ms ease-in-out;
+}
