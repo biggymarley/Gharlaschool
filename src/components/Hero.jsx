@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { images } from "../data/data";
-import { ArrowDown, ChevronsDown } from "lucide-react";
+import { ArrowDown, ChevronsDown, Instagram } from "lucide-react";
 
 export const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,7 +36,10 @@ export const Hero = () => {
         />
       </div>
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-6xl font-bold mb-4 uppercase font">
+        <a href="https://www.instagram.com/gharla_skate_school/" target="_blank" className="flex gap-2 items-center absolute bottom-[8px] left-[8px]">
+        <span className="font text-xl sm:text-2xl"><span className="text-yellow-400">@</span>gharla_skate_school</span>
+        </a>
+        <h1 className="text-4xl sm:text-6xl font-bold mb-4 uppercase font">
           <span className="text-yellow-500">gharla</span> skate school
         </h1>
         <p className="text-xl mb-8">Push Your Limits. Master The Board.</p>

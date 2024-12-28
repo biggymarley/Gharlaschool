@@ -1,8 +1,8 @@
 import { Check } from "lucide-react";
+import { PopupButton } from "react-calendly";
 import { pricing } from "../data/data";
 
 export const Pricing = () => {
- 
   return (
     <section className="py-20 bg-gray-800 px-4" id="plans">
       <div className="max-w-6xl mx-auto">
@@ -26,14 +26,12 @@ export const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="https://www.instagram.com/gharla_skate_school/"
-                target="_blank"
-              >
-                <button className="w-full bg-yellow-400 hover:bg-yellow-700 text-black py-3 rounded-lg mt-8 transition-all">
-                  Choose {tier.tier}
-                </button>
-              </a>
+              <PopupButton
+                url="https://calendly.com/skategharla/30min"
+                rootElement={document.getElementById("root")}
+                text={`Choose ${tier.tier}`}
+                className="w-full bg-yellow-400 hover:bg-yellow-700 text-black py-3 rounded-lg mt-8 transition-all"
+              />
             </div>
           ))}
         </div>
