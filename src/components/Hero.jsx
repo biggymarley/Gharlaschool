@@ -42,7 +42,7 @@ export const Hero = () => {
         <h1 className="text-4xl sm:text-6xl font-bold mb-4 uppercase font">
           <span className="text-yellow-500">gharla</span> skate school
         </h1>
-        <p className="text-xl mb-8">Push Your Limits. Master The Board.</p>
+        <p className="text-xl mb-8">I'll Help You Push Your Limits and Master Your Board</p>
         <div className="w-[200px] flex flex-col items-center">
           <a
             href="#plans"

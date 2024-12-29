@@ -9,7 +9,7 @@ export const Contact = () => (
       </h2>
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
+          <h3 className="text-2xl font-bold mb-6">Contact Me</h3>
           <div className="space-y-4">
             <div className="flex items-center text-yellow-500">
               <MapPin className="w-6 h-6 mr-4 text-yellow-500" />

@@ -3,18 +3,23 @@ import about from "/assets/about.jpg";
 export const About = () => (
   <section className="py-20 px-4">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-4xl font-bold mb-12 text-center font">
-        About Our School
-      </h2>
+      <div className="flex justify-center items-end gap-4">
+        <h2 className="text-4xl font-bold mb-12 text-center font">About me</h2>
+        <span className="text-xl font-light mb-12 text-center font text-yellow-400">
+          Youness Ouahid
+        </span>
+      </div>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-lg">
-            Welcome to Gharla Skate School, where we turn passion into progress
-            on the board! I'm Gharla, a dedicated skateboarding instructor with
-            a focus on skill-building, safety, and fostering a vibrant
-            skateboarding community. My classes are designed for skaters of all
-            levels, whether you're stepping on a skateboard for the first time
-            or looking to refine your skills.
+            Welcome! I'm <span className="text-yellow-500">Gharla</span>, and
+            I'm here to help turn your skateboarding passion into real progress.
+            As your dedicated instructor, I believe in building solid skills,
+            keeping you safe, and creating an awesome skating community right
+            here. Whether you're about to step on a board for the first time or
+            you're looking to level up your skills, I've designed my classes to
+            meet you where you are. Every beginner has a unique journey, and I'm
+            excited to be part of yours!
           </p>
         </div>
         <div>
