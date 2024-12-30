@@ -27,7 +27,7 @@ export const Pricing = () => {
                 {tier.tier}
               </h3>
               <p className="font text-3xl font-bold text-yellow-500 text-center ">
-                {tier.price}
+                {tier.price}<span className="text-sm">/Session</span>
               </p>
               <p className="text-md font-light text-gray-300 text-center mb-6">
                 {tier.subTitle}
