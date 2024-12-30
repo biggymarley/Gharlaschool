@@ -81,7 +81,7 @@ export const pricing = [
     subTitle: "5 to 9 Sessions",
     price: "$25",
     isDiscounted: true,
-    discount: "16%",
+    discount: "-16%",
     features: [
       "Advanced turning techniques",
       "Up ramp turns",
@@ -94,7 +94,7 @@ export const pricing = [
     tier: "Advanced",
     subTitle: "10+ Sessions",
     price: "$20",
-    discount: "33%",
+    discount: "-33%",
     isDiscounted: true,
     features: [
       "50-50 grinds",
