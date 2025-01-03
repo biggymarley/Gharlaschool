@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maroc-gharlaskateschool.vercel.app/sitemap.xml
