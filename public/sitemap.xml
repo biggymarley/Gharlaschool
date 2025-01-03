@@ -8,16 +8,4 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://maroc-gharlaskateschool.vercel.app/about</loc>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://maroc-gharlaskateschool.vercel.app/contact</loc>
-        <lastmod>2024-01-03</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
